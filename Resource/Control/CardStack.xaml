@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="CardGames.UI.CardStack"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="400" Width="81">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" 
+                  HorizontalAlignment="Left">
+        <Grid Width="71" Name="Stack">
+            <!--做出下半部消失的卡槽-->
+            <Label Style="{StaticResource CellLabel}" Height="100" Width="65" HorizontalAlignment="Center"
+               VerticalAlignment="Top">
+                <Label.OpacityMask>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#FFFF" Offset="0" />
+                        <GradientStop Color="#0FFF" Offset="1" />
+                    </LinearGradientBrush>
+                </Label.OpacityMask>
+            </Label>
+            <Grid Name="CardPanel" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

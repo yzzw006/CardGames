@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="CardGames.GolfGame.Golf"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="{StaticResource TableBrushGreen}"
+             d:DesignHeight="600" d:DesignWidth="800" xmlns:my="clr-namespace:CardGames.UI">
+    <Grid Name="GamePannel">
+        <!--游戏信息-->
+        <Border Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#7658F8" Height="37" Width="167">
+            <TextBlock Height="Auto" HorizontalAlignment="Center"  Name="CountLabel" FontSize="14"
+                   Text="Remained Cards : 17" Foreground="White" VerticalAlignment="Center"  Width="Auto" Focusable="True" />
+        </Border>
+        <!--<my:CardStack Height="517" Margin="32,50,0,0" x:Name="HomeList" VerticalAlignment="Top"
+                      HorizontalAlignment="Left"/>-->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0" 
+                    Orientation="Horizontal">
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack1"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack2"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack3"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack4"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack5"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack6"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="cardStack7"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="HomeList"/>
+            <my:CardStack Height="350" Margin="0,0,0,0" x:Name="DealList" IsHitTestVisible="False" />
+        </StackPanel>
+        <!--菜单-->
+        <StackPanel  VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130">
+            <Button Background="#7658F8" Content="Deal" Click="Menu_Deal" Margin="0,0,0,0"
+                    Style="{StaticResource FlatButton}"/>
+            <Button Background="#7658F8" Content="Restart" Click="Menu_Restart" Margin="0,5,0,0"
+                    Style="{StaticResource FlatButton}"/>
+            <Button Background="#7658F8" Content="Help" Click="Menu_Help" Margin="0,5,0,0"
+                    Style="{StaticResource FlatButton}"/>
+            <Button Background="#7658F8" Content="Back" Click="Menu_Return_Click" Margin="0,5,0,0"
+                    Style="{StaticResource FlatButton}"/>
+        </StackPanel>
+        <Canvas Name="DragField">
+            <Grid Name="DragPannel" Width="71" Height="Auto" />
+        </Canvas>
+    </Grid>
+</UserControl>

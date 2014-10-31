@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--图片-->
+    <Image x:Key="J1" Source="/CardGames;component/Resource/Image/J_H.png"/>
+    <Image x:Key="J2" Source="/CardGames;component/Resource/Image/J_D.png"/>
+    <Image x:Key="J3" Source="/CardGames;component/Resource/Image/J_S.png"/>
+    <Image x:Key="J4" Source="/CardGames;component/Resource/Image/J_C.png"/>
+    <Image x:Key="Q1" Source="/CardGames;component/Resource/Image/Q_H.png"/>
+    <Image x:Key="Q2" Source="/CardGames;component/Resource/Image/Q_D.png"/>
+    <Image x:Key="Q3" Source="/CardGames;component/Resource/Image/Q_S.png"/>
+    <Image x:Key="Q4" Source="/CardGames;component/Resource/Image/Q_C.png"/>
+    <Image x:Key="K1" Source="/CardGames;component/Resource/Image/K_H.png"/>
+    <Image x:Key="K2" Source="/CardGames;component/Resource/Image/K_D.png"/>
+    <Image x:Key="K3" Source="/CardGames;component/Resource/Image/K_S.png"/>
+    <Image x:Key="K4" Source="/CardGames;component/Resource/Image/K_C.png"/>
+
+    <ImageBrush x:Key="CardBack" ImageSource="/CardGames;component/Resource/Image/cardback.png"/>
+    
+    <!--图形资源-->
+    <!--红桃-->
+    <StreamGeometry x:Key="Heart">
+        M1,22 A23,21 180 1 1 47,22 M49,22 A23,21 180 1 1 95,22 C 95,42 48,89 48,109 C 48,89 1,42 1,22
+    </StreamGeometry>
+    <!--方块-->
+    <StreamGeometry x:Key="Diamond">
+        M0,52  Q24,35 39.5,0 55,35 79,52 55,69 39.5,104 24,69 0,52
+    </StreamGeometry>
+    <!--黑桃-->
+    <StreamGeometry x:Key="Spade">
+        M42,0 C42,18 0,44 0,62 A21,21 90 0 0 21,83 Q37,83 41,69 Q37,105 5,108 
+        L5,111 79,111 79,108 Q47,105 43 69 Q47,83 63,83 A21,21 90 0 0 84,62 C84,44 42,18 42,0
+    </StreamGeometry>
+    <!--梅花-->
+    <StreamGeometry x:Key="Club">
+        M53,63 Q44,82 23,82 A23,23.5 300 1 1 35,38 A24,23 256 1 1 73,38 A23,23.5 300 1 1 85,82
+        Q64,82 55,63 Q55,98 90,108 L90,111 18,111 Q53,98 53,62
+    </StreamGeometry>
+    <!--向上箭头-->
+    <StreamGeometry x:Key="UpArrow">
+        M0,5 L5,0 10,5 10,9 5,4 0,9 0,5z
+    </StreamGeometry>
+    <!--向下箭头-->
+    <StreamGeometry x:Key="DownArrow">
+        M0,0 5,4 10,0 10,4 5,9 0,4 0,0z
+    </StreamGeometry>
+
+    <SolidColorBrush x:Key="CardGreen" Color="#07832F"/>
+    
+    <!--桌布背景-->
+    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="TableBrushGreen">
+        <GradientStop Color="#05461B" Offset="0" />
+        <GradientStop Color="#0B8F39" Offset="0.5" />
+        <GradientStop Color="#05461B" Offset="1" />
+    </LinearGradientBrush>
+    
+    <!--卡背景色-->
+    <LinearGradientBrush x:Key="CardBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#FFF" Offset="0.6"/>
+        <GradientStop Color="LightGray" Offset="1"/>
+        <!--ECD595 8F7640 -->
+    </LinearGradientBrush>
+    <!--控件背景色-->
+    <LinearGradientBrush x:Key="ControlBackgroundBrush" StartPoint="0.3,0.3" EndPoint="1,1">
+        <GradientStop Color="#111" Offset="0" />
+        <GradientStop Color="#085" Offset="0.3" />
+        <GradientStop Color="#222" Offset="1" />
+    </LinearGradientBrush>
+    <!--红桃填充色-->
+    <LinearGradientBrush x:Key="HeartBrush" StartPoint="0,0" EndPoint="1,0" >
+        <!--殷红 #DC163C-->
+        <!--<GradientStop Color="#EF6E35" Offset="0" />
+        <GradientStop Color="#DC163C" Offset="0.5" />
+        <GradientStop Color="#FF0000" Offset="1" />-->
+        <GradientStop Color="#DC7294" Offset="0" />
+        <GradientStop Color="#C41684" Offset="0.5" />
+        <GradientStop Color="#DC7294" Offset="1" />
+    </LinearGradientBrush>
+    <!--黑桃填充色-->
+    <LinearGradientBrush x:Key="SpadeBrush" StartPoint="0,0" EndPoint="1,0" >
+        <GradientStop Color="#626258" Offset="0" />
+        <GradientStop Color="#302F2B" Offset="0.5" />
+        <GradientStop Color="#040404" Offset="1" />
+    </LinearGradientBrush>
+</ResourceDictionary>

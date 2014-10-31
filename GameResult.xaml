@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="CardGames.GameResult"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Background="#1F0068" Height="130" Width="220">
+    <Grid Margin="10,10">
+        <StackPanel Margin="0,0,0,0" Orientation="Vertical" >
+        <TextBlock Height="25" HorizontalAlignment="Center" Margin="0,12,0,0" Name="GameInfo" Text="You Win !" 
+                   VerticalAlignment="Top" Width="Auto" FontSize="18" Foreground="White"/>
+        <Button Content="Another game" Height="23"  Name="Btn_NewGame"
+                    Background="#5F37BE" Margin="0,15,0,0"
+                    Style="{StaticResource FlatButton}" Click="Btn_NewGame_Click" />
+        <Button Content="Back" Height="23" Margin="0,5,0,0" Name="Btn_Back"
+                        Background="#5F37BE"
+                        Style="{StaticResource FlatButton}" Click="Btn_Back_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

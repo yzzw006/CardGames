@@ -1,0 +1,35 @@
+﻿<Button x:Class="CardGames.UI.CardBorder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" UseLayoutRounding="True"
+             Style="{StaticResource CardBorderStyle}">
+    <!--一张卡实际面积 109*71-->
+    <Viewbox Stretch="Uniform">
+        <Border CornerRadius="3" Margin="0,0,0,0" Height="100" Width="65" 
+                BorderBrush="Silver" BorderThickness="1" Background="{StaticResource CardBackgroundBrush}">
+            <Grid Name="CardFrame" Margin="2,2">                
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="Auto">
+                    <Label Content="10" Name="IndexA" FontSize="14" Padding="0" HorizontalAlignment="Center"
+                           FontFamily="Agency FB" Width="Auto" FontWeight="Bold"/>
+                    <Label Name="ColorA" Margin="0,2,0,0" Padding="0" Width="8"/>
+                </StackPanel>
+                <Grid Name="CardBody" HorizontalAlignment="Center" VerticalAlignment="Center" Width="38" 
+                      Height="83">
+                    
+                </Grid>
+                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="Auto"
+                            RenderTransformOrigin="0.5,0.5">
+                    <StackPanel.RenderTransform>
+                        <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    </StackPanel.RenderTransform>
+                    <Label Content="A" Name="IndexB" FontSize="14" Padding="0" FontFamily="Agency FB"
+                           HorizontalAlignment="Center" Width="Auto" FontWeight="Bold"/>
+                    <Label Name="ColorB" Margin="0,2,0,0" Padding="0" Width="8"/>
+                </StackPanel>
+                <Border Name="Back" Background="{StaticResource CardBack}" Opacity="0"/>
+            </Grid>
+        </Border>
+        
+    </Viewbox>
+</Button>

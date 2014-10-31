@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="CardGames.HelpWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="#1F0068" Height="Auto" Width="300" VerticalAlignment="Center">
+    <Grid Margin="10,10">
+        <StackPanel Orientation="Vertical" Height="Auto">
+            <Label Content="Help" Foreground="White" FontSize="18" HorizontalAlignment="Center"/>
+            <!--<TextBlock Height="25" HorizontalAlignment="Center" Margin="0,12,0,0" Name="GameInfo" Text="You Win !" 
+                   VerticalAlignment="Top" Width="Auto" FontSize="18" Foreground="White"/>-->
+            <TextBlock Text="目的：把所有的牌都移至桌面上的12列。&#x000A;规则：将牌不计花色地由大向小排列。一次只能移动一张牌。空列可以得到发的新牌。其他列的牌不能移至空列。" 
+                      Name="HelpInfo" Foreground="White" TextWrapping="Wrap" FontSize="16" Height="Auto"/>
+            <Button Content="Close" Height="23" Margin="0,15,0,0" Name="Btn_Back"
+                        Background="#5F37BE"
+                        Style="{StaticResource FlatButton}" Click="Btn_Close_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

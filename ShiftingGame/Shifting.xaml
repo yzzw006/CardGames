@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="CardGames.ShiftingGame.Shifting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="{StaticResource TableBrushGreen}"
+             d:DesignHeight="600" d:DesignWidth="800" xmlns:my="clr-namespace:CardGames.UI">
+    <Grid Name="GamePannel">
+        <my:CardStack Height="364" Margin="32,12,0,0" x:Name="CardLibrary" VerticalAlignment="Top"
+                      HorizontalAlignment="Left"/>
+        <StackPanel HorizontalAlignment="Center" Margin="0,12,12,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <!--108*71-->
+            <Label Name="Homecell1" Style="{StaticResource CellLabel}"/>
+            <Label Name="Homecell2" Style="{StaticResource CellLabel}" Margin="10,0,0,0"/>
+            <Label Name="Homecell3" Style="{StaticResource CellLabel}" Margin="10,0,0,0"/>
+            <Label Name="Homecell4" Style="{StaticResource CellLabel}" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,160,0,0" 
+                    Orientation="Horizontal">
+            <my:CardStack Margin="0,0,0,0" x:Name="cardStack1"/>
+            <my:CardStack Margin="30,0,0,0" x:Name="cardStack2"/>
+            <my:CardStack Margin="30,0,0,0" x:Name="cardStack3"/>
+            <my:CardStack Margin="30,0,0,0" x:Name="cardStack4"/>
+        </StackPanel>
+        <Canvas Name="DragField">
+            <Grid Name="DragPannel" Width="71" Height="Auto" />
+        </Canvas>
+        <!--菜单-->
+        <StackPanel  VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="130">
+            <Button Background="#7658F8" Content="Restart" Click="Menu_Restart" Margin="0,0,0,0"
+                    Style="{StaticResource FlatButton}"/>
+            <Button Background="#7658F8" Content="Help" Click="Menu_Help" Margin="0,5,0,0"
+                    Style="{StaticResource FlatButton}"/>
+            <Button Background="#7658F8" Content="Back" Click="Menu_Return_Click" Margin="0,5,0,0"
+                    Style="{StaticResource FlatButton}"/>
+        </StackPanel>
+        <TextBlock Height="23" Name="FocusControl" Text="" Width="71" Focusable="True" 
+                   VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+    </Grid>
+</UserControl>

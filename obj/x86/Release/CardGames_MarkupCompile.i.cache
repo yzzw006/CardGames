@@ -1,0 +1,20 @@
+﻿CardGames
+
+
+winexe
+C#
+.cs
+D:\Documents\Visual Studio 2010\Projects\WpfTest\CardGames\obj\x86\Release\
+CardGames
+none
+false
+TRACE
+D:\Documents\Visual Studio 2010\Projects\WpfTest\CardGames\App.xaml
+161810075043
+
+28-824865418
+12-1381780322
+AcesUpGame\AcesUp.xaml;FreecellGame\Freecell.xaml;FreecellGame\FreecellSelect.xaml;GameResult.xaml;GolfGame\Golf.xaml;HelpWindow.xaml;KlondikeGame\Klondike.xaml;MainWindow.xaml;NestorGame\Nestor.xaml;Resource\CardBrush.xaml;Resource\Control\CardBorder.xaml;Resource\Control\CardStack.xaml;Resource\Style\ButtonStyle.xaml;Resource\Style\ControlStyle.xaml;ShiftingGame\Shifting.xaml;TrustyTwelveGame\TrustyTwelve.xaml;
+
+True
+
